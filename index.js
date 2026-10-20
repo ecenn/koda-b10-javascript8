@@ -4,25 +4,31 @@
 // Jane setelah 500 ms
 // then.catch
 
-let i = 0
+function antrian(name, time){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(name)
+        }, time);
+    })
+}
 
 const customer = [
     {name: "John", time: 1500},
     {name: "Ed", time: 2000},
-    {name: "Jane", time: 500}]
-    
-const antrian = new Promise((resolve, reject) => {
-    if (i >= customer.length) reject("Maaf toko sudah tutup.")
-    setTimeout(() => {
-        resolve(customer[i].name)
-    }, customer[i].time)
+    {name: "Jane", time: 500}
+]
+
+console.time()
+
+antrian(customer[0].name, customer[0].time)
+.then((success) => {
+    console.log(success)
+    antrian(customer[1].name, customer[1].time)
+    .then((success) => {
+        console.log(success)
+        antrian(customer[2].name, customer[2].time)
+        .then((success) => {
+            console.log(success)
+            console.timeEnd()})
+    })
 })
-
-antrian
-.then((result) => {
-    console.log(result)
-    i += 1})
-.catch((err) => {
-    console.log(err)})
-
-console.log(antrian)
