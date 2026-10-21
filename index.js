@@ -23,12 +23,13 @@ console.time()
 antrian(customer[0].name, customer[0].time)
 .then((success) => {
     console.log(success)
-    antrian(customer[1].name, customer[1].time)
-    .then((success) => {
-        console.log(success)
-        antrian(customer[2].name, customer[2].time)
-        .then((success) => {
-            console.log(success)
-            console.timeEnd()})
-    })
+    return antrian(customer[1].name, customer[1].time)
+})
+.then((success) => {
+    console.log(success)
+    return antrian(customer[2].name, customer[2].time)
+})
+.then((success) => {
+    console.log(success)
+    console.timeEnd()
 })
