@@ -1,4 +1,4 @@
-# Materi: Asynchronous Programming
+# Materi: Asynchronous Programming - Promise
 
 Membuat program antrian menggunakan setTimeout dan Promise (then-catch) dengan urutan ouput:
 - "John" setelah 1500 ms
