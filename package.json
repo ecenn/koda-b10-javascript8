@@ -1,0 +1,29 @@
+{
+  "name": "koda-b10-javascript8",
+  "version": "1.0.0",
+  "description": "Membuat program antrian menggunakan setTimeout dan Promise (then-catch) dengan urutan ouput:\r - \"John\" setelah 1500 ms\r - \"Ed\" setelah 2000 ms\r - \"Jane\" setelah 500 ms",
+  "homepage": "https://github.com/ecenn/koda-b10-javascript8#readme",
+  "bugs": {
+    "url": "https://github.com/ecenn/koda-b10-javascript8/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecenn/koda-b10-javascript8.git"
+  },
+  "license": "MIT",
+  "author": "Jason Felix",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0"
+  }
+}
